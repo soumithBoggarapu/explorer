@@ -1,0 +1,41 @@
+<form [formGroup]="redditForm" autocomplete="off" (ngSubmit)="onSubmit()">
+  <div class="container-fluid top-margin-10">
+    <h5>
+      <strong>
+        Welcome to the Explorer!
+      </strong>
+    </h5>
+    <div class="form-group">
+      <label class='control-label'>
+        Please enter the subreddit name to retrieve related articles:
+        <div>
+            <input [ngClass]="{ 'is-invalid': (getFormControl('subredditName').dirty || getFormControl('subredditName').touched) && getFormControl('subredditName').errors }" type="text" name='subredditName' class="form-control" formControlName="subredditName" required>
+            <div *ngIf="getFormControl('subredditName').invalid && (getFormControl('subredditName').dirty || getFormControl('subredditName').touched)" class="text-error">
+              <div *ngIf="getFormControl('subredditName').errors.required">Subreddit Name is required.</div>
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class='col-xs-12 col-sm-2 pull-right'>
+      <button class='btn btn-primary btn-block pull-right' type="submit" [disabled]="!redditForm.valid">Submit</button>
+    </div>
+    <div class="top-padding-10 top-margin-60 border-top  col-xs-12">
+      <h5>
+        <strong> Articles </strong>
+      </h5>
+      <ul *ngIf="articles">
+        <li *ngFor="let article of articles.data.children">
+          <div class='col-sm-3'>
+              <img [src]="article.data.thumbnail" (error)="setDefaultPic()"  alt="...">
+          </div>
+          <div class='col-sm-6'>
+              <p>{{ article.data.title }}</p>
+              <p>
+                <a href="{{ article.data.url }}" target="_blank">{{ article.data.url }}</a>
+              </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</form>

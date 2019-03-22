@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.3em;
+    display: grid;
+    grid-template-columns: 30% auto;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+
+/***** Form Field Classes ***/
+.pull-right {
+  float: right;
+}
+
+.text-error {
+  color: red;
+}
+
+.is-invalid {
+  color: red;
+}
+
+.top-margin-10 {
+  margin-top: 10px;
+}
+
+.top-margin-60 {
+  margin-top: 60px;
+}
+
+.top-padding-10 {
+  padding-top: 10px;
+}
+
+button {
+  border: none !important;
+  color:  #42bfff;
+  &:hover {
+    color: #86d6ff;
+  }
+}
