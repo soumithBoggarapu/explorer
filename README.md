@@ -1,3 +1,5 @@
+This is an angular 7 application with reactive forms. This application is used to retrieve subreddit information from reddit website.
+
 # AngularApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
@@ -25,3 +27,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# explorer
+
+
+
+
